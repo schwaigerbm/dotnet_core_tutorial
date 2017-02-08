@@ -19,4 +19,5 @@ Projekt durch Kommandozeile erstellen:
 - .NET Projekt ausführen mit "dotnet run"
 	(Achtung dotnet new ohne Template erstellt eine reine minimale .NET App -> Kommadozeilen App)
 
-
+Project.json enthält die Versionsnummer, verschiedene Optionen für das Bauen, dependencies (jetzt noch leer) und 
+das ausgewählte Framework.
