@@ -1,0 +1,22 @@
+1.) .NET Core installieren
+2.) Entwicklungsumgebung (VS, Visual Studio Code etc.), auch Editor möglich
+
+Mögliche Webserver:
+- IIS
+- Eingebaute Webserver (Kestrel, WebListener)
+- Drittanbieter-Server (Apache etc..)
+
+Projekt durch Kommandozeile erstellen:
+
+- Verzeichniss auswählen mit "cd" usw.
+- .NET Inforamtionten ansehen mit "dotnet"
+- .NET Projekt erstellen mit "dotnet new [-t web]
+	(Parameter t gitb ein Template vor bspw.: Das Template web enthält einige
+	 Einstellungen, Konfigurationen und Hilfsdateien für eine einfache ASP.NET Core MVC App)
+- .NET Projekt wiederherstellen mit "dotnet restore"
+ 	(Lädt die entsprechenden abhängigen NuGet-Pakete und Bibliotheken herunter,
+	 nach jeder Änderung der Abhängigkeit muss dieser Befehl ausgeführt werden)
+- .NET Projekt ausführen mit "dotnet run"
+	(Achtung dotnet new ohne Template erstellt eine reine minimale .NET App -> Kommadozeilen App)
+
+
