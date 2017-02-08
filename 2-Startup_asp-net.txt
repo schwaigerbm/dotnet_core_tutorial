@@ -1,0 +1,37 @@
+1.) Web Host aufbauen
+	- Webserver auswählen
+	- Root setzten
+	- Startup aufrufen
+
+2.) Konfigurieren
+	- Konfigurationsdatein laden
+	- Dienste einbauen
+	- Middleware einbauen
+
+=> Program .cs => Startup.cs (Web Host aufbauen) => App + Dienste konfigureiren
+
+Eingener Webserver: Kestrel
+	Minimaler, eingebauter HTTP/HTTPS Webserver
+	Vorteil: Platformunabhänging und performant
+	Nachteil: Fehlende Sicherheits- und Zuverlässigkeitsfeatures
+	Kestrel alleine ist eher für einfache und schnelle Entwicklungen gedacht,
+	nicht aber für den Einsatz in Produktivsystemen. Hier wird ein hybrides Modell empfohlen.
+	Dabei werden zwei Server genutzt: Einmal Kestrel une einen vollwertigen Webserver welcher
+	als Proxy dient und seine erweiterten Funktionen einsetzen kann, bevor Kestrel zum Zug kommt.
+
+Konfigurationsdatein:
+
+	- kein web.config mehr
+	- JSON,XML, INI usw.
+	- Überschreibbar 
+	- Mehrere Datein möglich (z.B. pro Umgebung: Entwicklungseinstellungen, Produktivserver)
+
+Middleware:
+	ASP.NET Core nutzt eine Request Pipline (eine Art Fließband) auf der Requests hineinkommen.
+	Middleware sind jetzt voneinander unabhängige Module, die wie Arbeiter in einer festen
+	Reihenfolge an dieser Pipline arbeiten. Sie können Daten vom Band nehmen, verändern 
+	oder dazusetzten, und geben ihren Output als Input an den nächsten Arbeiter weiter.
+	ASP.NET Core ist dabei startk modularisiert und fast alles ist Middleware.
+	So auch das Aufliefern von statitschen Dateien, die Benutzung des MVC Frameworks oder auch Logging.
+
+	- Neue Middleware kann dabei durch NuGet Pakete installiert werden, oder selbst geschrieben werden.
