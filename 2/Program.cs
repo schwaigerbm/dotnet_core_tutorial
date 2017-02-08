@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration.Json;
+using Microsoft.Extensions.Configuration;
 
 namespace ConsoleApplication
 {
@@ -27,9 +29,17 @@ namespace ConsoleApplication
         }
 
         public class Startup{
+            public IConfiguration Configuration{get;set;}
+
+            public Startup(IHostingEnvironment env){
+                Configuration = new ConfigurationBuilder()
+                    .SetBasePath(env.ContentRootPath)
+                    .AddJsonFile("config.json")
+                    .Build();
+            }
     
             public void Configure(IApplicationBuilder app, IHostingEnvironment env){
-                app.Run(async(context) => await context.Response.WriteAsync("Hello World ASP.NET"));
+                app.Run(async(context) => await context.Response.WriteAsync("Hello World "+ Configuration["Name"]));
 
             }
 
