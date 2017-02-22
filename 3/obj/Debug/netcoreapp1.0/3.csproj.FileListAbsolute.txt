@@ -1,0 +1,8 @@
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\bin\Debug\netcoreapp1.0\3.deps.json
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\bin\Debug\netcoreapp1.0\3.runtimeconfig.json
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\bin\Debug\netcoreapp1.0\3.runtimeconfig.dev.json
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\bin\Debug\netcoreapp1.0\3.dll
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\bin\Debug\netcoreapp1.0\3.pdb
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\obj\Debug\netcoreapp1.0\3.AssemblyInfo.cs
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\obj\Debug\netcoreapp1.0\3.dll
+C:\Users\it-systembetreuer\Documents\dotnet_core_tutorial\3\obj\Debug\netcoreapp1.0\3.pdb
